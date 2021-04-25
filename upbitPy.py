@@ -42,7 +42,7 @@ while True:
         start_time1 = get_start_time("KRW-XRP")
         end_time1 = start_time1 + datetime.timedelta(days=1)
 
-        if start_time1 < now < end_time1 - datetime.timedelta(seconds=10):
+        if start_time1 - datetime.timedelta(minutes=60) < now < end_time1 - datetime.timedelta(seconds=610):
             target_price = get_target_price("KRW-XRP", 0.030)
             current_price = get_current_price("KRW-XRP")
             if target_price < current_price:
@@ -57,7 +57,7 @@ while True:
         start_time2 = get_start_time("KRW-BTT")
         end_time2 = start_time2 + datetime.timedelta(days=1)
 
-        if start_time2 < now < end_time2 - datetime.timedelta(seconds=10):
+        if start_time2 - datetime.timedelta(seconds=610) < now < end_time2 - datetime.timedelta(seconds=620):
             target_price = get_target_price("KRW-BTT", 0.464)
             current_price = get_current_price("KRW-BTT")
             if target_price < current_price:
